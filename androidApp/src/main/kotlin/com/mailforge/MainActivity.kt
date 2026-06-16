@@ -65,7 +65,7 @@ class MainActivity : ComponentActivity() {
                 socket.writeLine("MAIL FROM:<$myEmail>")
                 Log.d("SMTP_TEST", "MAIL FROM: ${socket.readLine()}")
 
-                val toAddress = "avnishjha277@gmail.com" // send to yourself for the test
+                val toAddress = "example2@gmail.com" // send to yourself for the test
                 socket.writeLine("RCPT TO:<$toAddress>")
                 Log.d("SMTP_TEST", "RCPT TO: ${socket.readLine()}")
 
