@@ -13,8 +13,8 @@ Most "send email from your app" solutions push you toward a paid API (SendGrid, 
 
 ## Supported Platforms
 
-| Platform | Status | Notes |
-|---|---|---|
+| Platform | Status    | Notes |
+|---|-----------|---|
 | Android | ✅ Working | Uses `java.net.Socket` / `SSLSocketFactory` |
 | JVM (Desktop) | ✅ Working | Same socket implementation as Android |
 | Web (WasmJS / JS) | ❌ Not yet | Browsers have no raw TCP socket API — a server-side relay is needed |
@@ -22,7 +22,7 @@ Most "send email from your app" solutions push you toward a paid API (SendGrid, 
 
 ---
 
-## How It Works
+## How It  Works
 
 MailForge opens a TCP connection to your SMTP server, performs `STARTTLS` to upgrade to an encrypted connection, authenticates with `AUTH LOGIN`, and sends a manually constructed MIME message — all without any third-party email library.
 
